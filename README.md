@@ -86,6 +86,8 @@ ${CICD_COMMAND} iac vuln-web-app --report > outputs/dvwa.iac.default.txt
 ${CICD_COMMAND} iac vuln-web-app --report --policies "Demo - Block IaC Critical Misconfigurations" > outputs/dvwa.iac.policy.txt
 ```
 
+Example output of this command is here: [outputs/dvwa.iac.policy.txt](./outputs/dvwa.iac.policy.txt)
+
 ## Secret Scanning Demos
 
 Secret detection walks through the provided filesystem and searches for a wide variety of secrets (PEM files, embedded tokens, etc.) that may have been inadvertently left in the filesystem or hardcoded into the files. Like IaC, the local filesystem is scanned and we'll continue to use the DWVA [vuln-web-app](./vuln-web-app/) git submodule:
@@ -96,6 +98,8 @@ ${CICD_COMMAND} secrets vuln-web-app --report > outputs/dvwa.secrets.default.txt
 ```
 
 (Note: Secret policies are not yet supported)
+
+Example output of this command is here: [outputs/dvwa.secrets.default.txt](./outputs/dvwa.secrets.default.txt)
 
 ## Local Container Build and Scan Example
 
@@ -108,6 +112,8 @@ cd ..
 
 ${CICD_COMMAND} image local/dvwa:20240918 --local --report > outputs/dvwa.image.txt
 ```
+
+Example output of this command is here: [outputs/dvwa.image.txt](./outputs/dvwa.image.txt)
 
 ## YAML Configuration for Scan Jobs
 
