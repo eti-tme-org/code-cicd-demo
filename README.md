@@ -1,6 +1,13 @@
 # code-cicd-demo
 
-Panoptica CI/CD CLI Demos for Code Security
+__Panoptica CI/CD CLI Demos for Code Security__
+
+There are several categories of demos documented in this repo:
+
+- Container Image Scanning via CLI: Both [remote repo](./README.md#container-image-demos) and [local image](./README.md#local-container-build-and-scan-example)
+- [IaC Scanning via CLI](./README.md#iac-scanning-demos)
+- [Secret Scanning via CLI](./README.md#secret-scanning-demos)
+- [GitHub Pull Request scanning](./README.md#github-pull-request-scanning-example)
 
 ## Container Image Demos
 
@@ -117,6 +124,37 @@ An example command to leverage the YAML configuration for scanning images:
 ```bash
 ${CICD_COMMAND} images nginx:latest --config configs/config-images.yaml
 ```
+
+## GitHub Pull Request Scanning Example
+
+This "demo" is already set up for you and all you have to do is look at the behavior. The generated [pull request](https://github.com/eti-tme-org/vuln-web-app/pull/2) is based on the following actions in the [vulnerable app](./vuln-web-app/) git submodule:
+
+```bash
+cd vuln-web-app
+git checkout --track origin/insecure
+
+# Add secrets to Dockerfile
+cat >> Dockerfile <<EOF
+# Taken from AWS Docs https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds-programmatic-access.html
+ENV AWS_KEY=AKIAIOSFODNN7EXAMPLE
+ENV AWS_SECRET=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+EOF
+
+cp config/config.inc.php.dist config/config.inc.php
+
+git add Dockerfile config/config.inc.php
+git commit -m "Add insecure secrets into the repository to test pull request scanning"
+git push
+
+gh repo set-default eti-tme-org/vuln-web-app
+gh pr create --title "Demo - PR with secrets added" --body "An example PR that should flag secrets detected."
+```
+
+A summary screenshot of the resulting PR tests is shown below:
+
+![PR Scan Summary Results](./images/demo.code.prscan.png)
+
+Feel free to investigate the [detailed scan results in GitHub](https://github.com/eti-tme-org/vuln-web-app/pull/2)
 
 ## Pre-requisites
 
