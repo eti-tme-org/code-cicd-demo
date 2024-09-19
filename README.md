@@ -168,7 +168,7 @@ On your local system (assuming MacOS for this demo), you'll need to have these c
 
 - git: Xcode Command Line Tools, initially for Homebrew setup
 - [Homebrew](brew.sh)
-- jq: [Brewfile.code](./Brewfile.code)
+- jq: See [Brewfile.code](./Brewfile.code)
 
 For the brew packages, you can install them by hand or leverage the Brewfiles via:
 
@@ -215,7 +215,7 @@ For local container scanning, you'll need to have either Docker Desktop or Ranch
 
 There is a preloaded pull request already present in the vulnerable application repository. However, if you'd like to generate your own pull requests (on your own repo where you have push privileges), you'll need to generate the pull request via the GitHub web UI or the CLI:
 
-- [gh](./Brewfile.github) cli
+- gh cli: See [Brewfile.github](./Brewfile.github)
 
 ### Hashicorp Cloud Platform (optional)
 
