@@ -67,7 +67,7 @@ The overview page with the list of jobs reported to the UI:
 
 Clicking on the specific scan job will present the detailed findings:
 
-![CI/CD Scans Container Image Details](./images/CY24Q3-demo-cicd-scans-details.png)
+![CI/CD Scans Container Image Details](./images/CY24Q3-demo-cicd-scan-details.png)
 
 To see the related policy that the image was evaluated against, navigate to the [Policies](https://console.panoptica.app/global-policies/) menu and select the "CI/CD" tab.  Selecting the [Demo - Vulnerable Package Detection](https://console.panoptica.app/global-policies/rule/1be9b0c1-e8b2-4dee-8bb8-5ecf3a487e9d) policy will show the rule logic details:
 
