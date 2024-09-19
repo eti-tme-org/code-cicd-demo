@@ -161,7 +161,7 @@ For these demo use cases, two CI/CD Policies have been created in the demonstrat
 - "Demo - Vulnerable Package Detection": A [Detect with Severity High](https://console.panoptica.app/global-policies/rule/1be9b0c1-e8b2-4dee-8bb8-5ecf3a487e9d) policy to identify 3+ Vulnerabilities of Severity High or Critical in a given package
 - "Demo - Block IaC Critical Misconfigurations": A [Block with Severity Critical](https://console.panoptica.app/global-policies/rule/13f91394-2d4e-4349-bec9-759b7c920804) policy to identify 3+ IaC Misconfiguration of Severity Critical in a give file.
 
-These policies will be referenced in the CI/CD examples below.
+These policies will be referenced in the CI/CD examples below. Creation of the policies is documented at the end of this [README.md](./README.md#policy-setup)
 
 ### Docker - local socket (optional)
 
@@ -198,3 +198,19 @@ In short, you could choose one of two adventures to populate the required enviro
 ## References
 - [OWASP](https://owasp.org/www-project-damn-vulnerable-web-sockets/) [Damn Vulnerable Web Socket](https://github.com/interference-security/DVWS.git): no secret or IaC issues.
 - [Damn Vulnerable Web App](https://github.com/digininja/DVWA.git): Has secrets and IaC issues.
+
+## Policy Setup
+
+The following screenshots document the policy configuration in the Panoptica UI for the scenarios leveraged by this demo.
+
+### Demo - Vulnerable Package Detection
+
+![Step 1](./images/demo.policy.block-vuln-critical-1.png)
+
+![Step 2](./images/demo.policy.block-vuln-critical-2.png)
+
+### Demo - Block IaC Critical Misconfigurations
+
+![Step 1](./images/demo.policy.block-iac-critical-1.png)
+
+![Step 2](./images/demo.policy.block-iac-critical-2.png)
