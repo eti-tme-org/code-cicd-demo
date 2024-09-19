@@ -1,0 +1,3 @@
+[submodule "vuln-web-app"]
+	path = vuln-web-app
+	url = https://github.com/eti-tme-org/vuln-web-app.git

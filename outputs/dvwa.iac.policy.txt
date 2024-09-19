@@ -1,0 +1,30 @@
+2024-09-19T11:39:27.399-0400	[34mINFO[0m	Initializing IaC scan: vuln-web-app
+2024-09-19T11:39:30.046-0400	[34mINFO[0m	IaC scan is in progress
+2024-09-19T11:39:51.383-0400	[34mINFO[0m	IaC scan finished successfully
+2024-09-19T11:39:51.384-0400	[34mINFO[0m	Writing IaC results to console
+FILE NAME                                 FINDING NAME                              FILE LINK                                    SEVERITY    
+Dockerfile                                Missing User Instruction                  Dockerfile#1                                 High         
+Dockerfile                                Apt Get Install Pin Version Not Defined   Dockerfile#1                                 Medium       
+Dockerfile                                Apt Get Install Pin Version Not Defined   Dockerfile#1                                 Medium       
+Dockerfile                                Apt Get Install Pin Version Not Defined   Dockerfile#1                                 Medium       
+Dockerfile                                Apt Get Install Pin Version Not Defined   Dockerfile#1                                 Medium       
+Dockerfile                                Apt Get Install Pin Version Not Defined   Dockerfile#1                                 Medium       
+compose.yml                               Healthcheck Not Set                       compose.yml#10                               Medium       
+compose.yml                               Healthcheck Not Set                       compose.yml#25                               Medium       
+compose.yml                               Privileged Ports Mapped In Container      compose.yml#21                               Medium       
+compose.yml                               Security Opt Not Set                      compose.yml#25                               Medium       
+compose.yml                               Security Opt Not Set                      compose.yml#10                               Medium       
+.github/workflows/codeql-analysis.yml     Unpinned Actions Full Length Commit SHA   .github/workflows/codeql-analysis.yml#57     Medium       
+.github/workflows/codeql-analysis.yml     Unpinned Actions Full Length Commit SHA   .github/workflows/codeql-analysis.yml#46     Medium       
+.github/workflows/shiftleft-analysis.yml  Unpinned Actions Full Length Commit SHA   .github/workflows/shiftleft-analysis.yml#40  Medium       
+.github/workflows/docker-image.yml        Unpinned Actions Full Length Commit SHA   .github/workflows/docker-image.yml#15        Medium       
+.github/workflows/codeql-analysis.yml     Unpinned Actions Full Length Commit SHA   .github/workflows/codeql-analysis.yml#71     Medium       
+Dockerfile                                Chown Flag Exists                         Dockerfile#18                                Low          
+Dockerfile                                Chown Flag Exists                         Dockerfile#19                                Low          
+compose.yml                               Container Capabilities Unrestricted       compose.yml#25                               Low          
+compose.yml                               Container Capabilities Unrestricted       compose.yml#10                               Low          
+Dockerfile                                Healthcheck Instruction Missing           Dockerfile#1                                 Low          
+Dockerfile                                APT-GET Not Avoiding Additional Packages  Dockerfile#1                                 Information  
+compose.yml                               Shared Volumes Between Containers         compose.yml#33                               Information  
+2024-09-19T11:39:51.386-0400	[34mINFO[0m	Evaluating policy: Demo - Block IaC Critical Misconfigurations, desc: Block action when 3+ critical misconfigurations detected.
+2024-09-19T11:39:53.297-0400	[34mINFO[0m	To see scan report, please visit: https://console.panoptica.app/scan-reports/66ec45c8508c9530a364c1bb/code-findings

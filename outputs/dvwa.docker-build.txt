@@ -1,0 +1,45 @@
+[+] Building 47.6s (10/10) FINISHED                                                                                                                                  docker:default
+ => [internal] load build definition from Dockerfile                                                                                                                           0.0s
+ => => transferring dockerfile: 846B                                                                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/php:8-apache                                                                                                                5.1s
+ => [internal] load .dockerignore                                                                                                                                              0.0s
+ => => transferring context: 117B                                                                                                                                              0.0s
+ => [1/5] FROM docker.io/library/php:8-apache@sha256:93ac377d33f857707c7684416504d23fe05da32dc9452789a02d382ec5d13184                                                         15.1s
+ => => resolve docker.io/library/php:8-apache@sha256:93ac377d33f857707c7684416504d23fe05da32dc9452789a02d382ec5d13184                                                          0.0s
+ => => sha256:aa4a19a03ad8c55ea4e19281dc404035fe663d2c8f6f229a03175cebd78293ec 12.77kB / 12.77kB                                                                               0.0s
+ => => sha256:8c15c4686903cb5bbd6cabc5447788b26574756d94e02c0952258c66bb2b4379 98.13MB / 98.13MB                                                                               9.1s
+ => => sha256:9125f50077837c519800d65edc67294c009e30fcc820455fbefc671b63081421 225B / 225B                                                                                     0.2s
+ => => sha256:a678a45741f89da7caf818943004a3b59b454ac7fb7d9486eeb65a09aa62893e 3.04kB / 3.04kB                                                                                 0.0s
+ => => sha256:8893eb8a52e8af8365ae670e2549bcff74923def7137abb8dbd4657905297f01 225B / 225B                                                                                     3.1s
+ => => sha256:93ac377d33f857707c7684416504d23fe05da32dc9452789a02d382ec5d13184 1.86kB / 1.86kB                                                                                 0.0s
+ => => extracting sha256:9125f50077837c519800d65edc67294c009e30fcc820455fbefc671b63081421                                                                                      0.0s
+ => => sha256:aa55da0753dad27fbf674997a6a04397736c543162afcaccd636738da352c108 20.33MB / 20.33MB                                                                               5.2s
+ => => sha256:60a3e15a12625719622136bcd7ea9d8c614ad174f11b4e5d64ee1a0e103a7c94 435B / 435B                                                                                     6.2s
+ => => sha256:c70c9882f3f52155ce9e7d769b5539a7fdb5eeab8c65342778b58511aabe9dd3 487B / 487B                                                                                     5.2s
+ => => sha256:fba515f9576300eaf3ab3807d9f575b5a37932308924bcad90b5fa9dc4d5fe18 12.81MB / 12.81MB                                                                               5.7s
+ => => sha256:1a8cf82d18af5745d7125d9799b63374307222dce1866823dcc9c055825de55b 493B / 493B                                                                                     5.8s
+ => => sha256:ec00a87d837e93ec7784b7e01cf5d7519fac7f9317ba4ffd3ce4333ee2bf62da 11.63MB / 11.63MB                                                                               6.2s
+ => => sha256:95b784617d5814d8167a599772fbe9f3850b80c2d7512a25ebdc34f82e45544d 2.46kB / 2.46kB                                                                                 6.3s
+ => => sha256:4b12a1a15757ce508f60e484f6d1226675fa9ecd06a53e54e7bfc0f0f6babccc 895B / 895B                                                                                     6.4s
+ => => sha256:53b03b21a80077ef71027aa4e3e7bfb1125e89f42f5b722556231d5260895050 245B / 245B                                                                                     6.3s
+ => => extracting sha256:8c15c4686903cb5bbd6cabc5447788b26574756d94e02c0952258c66bb2b4379                                                                                      4.4s
+ => => extracting sha256:8893eb8a52e8af8365ae670e2549bcff74923def7137abb8dbd4657905297f01                                                                                      0.0s
+ => => extracting sha256:aa55da0753dad27fbf674997a6a04397736c543162afcaccd636738da352c108                                                                                      0.7s
+ => => extracting sha256:60a3e15a12625719622136bcd7ea9d8c614ad174f11b4e5d64ee1a0e103a7c94                                                                                      0.0s
+ => => extracting sha256:c70c9882f3f52155ce9e7d769b5539a7fdb5eeab8c65342778b58511aabe9dd3                                                                                      0.0s
+ => => extracting sha256:fba515f9576300eaf3ab3807d9f575b5a37932308924bcad90b5fa9dc4d5fe18                                                                                      0.1s
+ => => extracting sha256:1a8cf82d18af5745d7125d9799b63374307222dce1866823dcc9c055825de55b                                                                                      0.0s
+ => => extracting sha256:ec00a87d837e93ec7784b7e01cf5d7519fac7f9317ba4ffd3ce4333ee2bf62da                                                                                      0.5s
+ => => extracting sha256:95b784617d5814d8167a599772fbe9f3850b80c2d7512a25ebdc34f82e45544d                                                                                      0.0s
+ => => extracting sha256:53b03b21a80077ef71027aa4e3e7bfb1125e89f42f5b722556231d5260895050                                                                                      0.0s
+ => => extracting sha256:4b12a1a15757ce508f60e484f6d1226675fa9ecd06a53e54e7bfc0f0f6babccc                                                                                      0.0s
+ => [internal] load build context                                                                                                                                              0.1s
+ => => transferring context: 1.40MB                                                                                                                                            0.0s
+ => [2/5] WORKDIR /var/www/html                                                                                                                                                0.3s
+ => [3/5] RUN apt-get update  && export DEBIAN_FRONTEND=noninteractive  && apt-get install -y zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev iputils-ping  && apt-get cl  26.9s
+ => [4/5] COPY --chown=www-data:www-data . .                                                                                                                                   0.0s
+ => [5/5] COPY --chown=www-data:www-data config/config.inc.php.dist config/config.inc.php                                                                                      0.0s
+ => exporting to image                                                                                                                                                         0.1s
+ => => exporting layers                                                                                                                                                        0.1s
+ => => writing image sha256:72b924e653d9a9a155c75cdd026665999967abf2be1149dab03afb240a83349f                                                                                   0.0s
+ => => naming to docker.io/eti-tme-tim/dvwa:20240918                  

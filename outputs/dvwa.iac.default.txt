@@ -1,0 +1,44 @@
+2024-09-18T15:49:27.443-0400	[34mINFO[0m	Initializing IaC scan: /Users/timmil/Library/CloudStorage/OneDrive-Cisco/Documents/Panoptica/demos/code-cicd/vuln-web-app
+2024-09-18T15:49:27.445-0400	[34mINFO[0m	IaC scan is in progress
+2024-09-18T15:49:48.623-0400	[34mINFO[0m	IaC scan finished successfully
+2024-09-18T15:49:48.623-0400	[34mINFO[0m	Writing IaC results to console
+FILE NAME                                 FINDING NAME                    FILE LINK                                    SEVERITY    
+Dockerfile                                Missing User Instruction        Dockerfile#1                                 High         
+Dockerfile                                Apt Get Install Pin Version     Dockerfile#1                                 Medium       
+                                          Not Defined                                                                               
+Dockerfile                                Apt Get Install Pin Version     Dockerfile#1                                 Medium       
+                                          Not Defined                                                                               
+Dockerfile                                Apt Get Install Pin Version     Dockerfile#1                                 Medium       
+                                          Not Defined                                                                               
+Dockerfile                                Apt Get Install Pin Version     Dockerfile#1                                 Medium       
+                                          Not Defined                                                                               
+Dockerfile                                Apt Get Install Pin Version     Dockerfile#1                                 Medium       
+                                          Not Defined                                                                               
+compose.yml                               Healthcheck Not Set             compose.yml#10                               Medium       
+compose.yml                               Healthcheck Not Set             compose.yml#25                               Medium       
+compose.yml                               Privileged Ports Mapped In      compose.yml#21                               Medium       
+                                          Container                                                                                 
+compose.yml                               Security Opt Not Set            compose.yml#25                               Medium       
+compose.yml                               Security Opt Not Set            compose.yml#10                               Medium       
+.github/workflows/codeql-analysis.yml     Unpinned Actions Full Length    .github/workflows/codeql-analysis.yml#71     Medium       
+                                          Commit SHA                                                                                
+.github/workflows/codeql-analysis.yml     Unpinned Actions Full Length    .github/workflows/codeql-analysis.yml#57     Medium       
+                                          Commit SHA                                                                                
+.github/workflows/codeql-analysis.yml     Unpinned Actions Full Length    .github/workflows/codeql-analysis.yml#46     Medium       
+                                          Commit SHA                                                                                
+.github/workflows/shiftleft-analysis.yml  Unpinned Actions Full Length    .github/workflows/shiftleft-analysis.yml#40  Medium       
+                                          Commit SHA                                                                                
+.github/workflows/docker-image.yml        Unpinned Actions Full Length    .github/workflows/docker-image.yml#15        Medium       
+                                          Commit SHA                                                                                
+Dockerfile                                Chown Flag Exists               Dockerfile#18                                Low          
+Dockerfile                                Chown Flag Exists               Dockerfile#19                                Low          
+compose.yml                               Container Capabilities          compose.yml#10                               Low          
+                                          Unrestricted                                                                              
+compose.yml                               Container Capabilities          compose.yml#25                               Low          
+                                          Unrestricted                                                                              
+Dockerfile                                Healthcheck Instruction         Dockerfile#1                                 Low          
+                                          Missing                                                                                   
+Dockerfile                                APT-GET Not Avoiding            Dockerfile#1                                 Information  
+                                          Additional Packages                                                                       
+compose.yml                               Shared Volumes Between          compose.yml#33                               Information  
+                                          Containers                                                                                

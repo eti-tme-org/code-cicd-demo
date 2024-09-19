@@ -66,6 +66,42 @@ To see the related policy that the image was evaluated against, navigate to the 
 
 ![CI/CD Policy Vulnerable Package Detection](./images/CY24Q3-demo-policy-cicd-image.png)
 
+## IaC Scanning Demos
+
+Now that you're seasoned in the demos, we'll be a bit more brief going forward. Each example will generate a text output and report the results to the Panoptica UI. As a result, you'll need to have the API KEY variable defined.
+
+The IaC scans identify a range of issues from typical infrastructure as code (IaC) text files, ranging from Terraform, Helm, Kubernetes YAML, and Dockerfiles. The scans are conducted on a local filesystem (whether in CI/CD pipeline runner or local laptop).
+
+In this demo, the [Damn Vulnerable Web Application](https://github.com/digininja/DVWA.git) has been cloned and connected as a git submodule in [vuln-web-app](./vuln-web-app/).  We'll scan it without policy first, then with policy second.
+
+```bash
+${CICD_COMMAND} iac vuln-web-app --report > outputs/dvwa.iac.default.txt
+${CICD_COMMAND} iac vuln-web-app --report --policies "Demo - Block IaC Critical Misconfigurations" > outputs/dvwa.iac.policy.txt
+```
+
+## Secret Scanning Demos
+
+Secret detection walks through the provided filesystem and searches for a wide variety of secrets (PEM files, embedded tokens, etc.) that may have been inadvertently left in the filesystem or hardcoded into the files. Like IaC, the local filesystem is scanned and we'll continue to use the DWVA [vuln-web-app](./vuln-web-app/) git submodule:
+
+```bash
+${CICD_COMMAND} secrets vuln-web-app --report > outputs/dvwa.secrets.default.txt
+# ${CICD_COMMAND} secrets vuln-web-app --report --policies "Demo - Block Detected Secrets" > outputs/dvwa.secrets.policies.txt
+```
+
+(Note: Secret policies are not yet supported)
+
+## Local Container Build and Scan Example
+
+For demo purposes - and for the love of all that is holy, don't run/deploy this container you are about to build - we can build the vulnerable app into a container and scan it to showcase a typical CI workflow:
+
+```bash
+cd vuln-web-app
+docker build -t local/dvwa:20240918 . > ../outputs/dvwa.docker-build.txt
+cd ..
+
+${CICD_COMMAND} image local/dvwa:20240918 --local --report > outputs/dvwa.image.txt
+```
+
 ## Pre-requisites
 
 On your local system (assuming MacOS for this demo), you'll need to have these core utilities installed onto your laptop:
@@ -119,7 +155,7 @@ For local container scanning, you'll need to have either Docker Desktop or Ranch
 
 There is a preloaded pull request already present in the vulnerable application repository. However, if you'd like to generate your own pull requests (on your own repo where you have push privileges), you'll need to generate the pull request via the GitHub web UI or the CLI:
 
-- [gh cli](./Brewfile.github)
+- [gh](./Brewfile.github) cli
 
 ### Hashicorp Cloud Platform (optional)
 
