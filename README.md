@@ -9,9 +9,9 @@ There are several categories of demos documented in this repo:
 - [Secret Scanning via CLI](./README.md#secret-scanning-demos)
 - [GitHub Pull Request scanning](./README.md#github-pull-request-scanning-example)
 
-## Container Image Demos
-
 See [pre-requisites](./README.md#pre-requisites) for the required software and setup required to perform these demos.
+
+## Container Image Demos
 
 Scanning an image or a local file/directory does NOT require API access to Panoptica. Referencing policies or reporting job results DOES require API key and access to Panoptica.
 
