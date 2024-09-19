@@ -102,6 +102,22 @@ cd ..
 ${CICD_COMMAND} image local/dvwa:20240918 --local --report > outputs/dvwa.image.txt
 ```
 
+## YAML Configuration for Scan Jobs
+
+For comprehensive scanning governance, many policies tend to be applied to prevent the maximum amount of risk that is acceptible. As you have seen, itemizing all those policy definitions can become overwhelming. To support these more sophisticated security needs, the Panoptica CI/CD scanner supports the use of a YAML file to configure the CLI operations. You can refer to the [CI/CD CLI Tool](https://docs.panoptica.app/docs/cicd-cli-tool) documentation for all the details.
+
+A couple of examples are provided in this repo:
+
+- [IaC Scanning Example](./configs/config-iac.yaml)
+- [Image Scanning Example](./configs/config-images.yaml)
+- [Secrets Detection Example](./configs/config-secrets.yaml)
+
+An example command to leverage the YAML configuration for scanning images:
+
+```bash
+${CICD_COMMAND} images nginx:latest --config configs/config-images.yaml
+```
+
 ## Pre-requisites
 
 On your local system (assuming MacOS for this demo), you'll need to have these core utilities installed onto your laptop:

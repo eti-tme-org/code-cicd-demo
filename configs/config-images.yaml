@@ -1,0 +1,7 @@
+# Configuration file for scanning images
+report: true
+
+image_exit-on-severity: "critical"
+
+policies:
+- "Demo - Vulnerable Package Detection"
