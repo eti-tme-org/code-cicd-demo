@@ -101,6 +101,10 @@ ${CICD_COMMAND} secrets vuln-web-app --report > outputs/dvwa.secrets.default.txt
 
 Example output of this command is here: [outputs/dvwa.secrets.default.txt](./outputs/dvwa.secrets.default.txt)
 
+The detailed view in the Panoptica UI of the results are shown below:
+
+![CI/CD CLI Secret Scanning UI Results](./images/CY24Q3-demo-cicd-secret-details.png)
+
 ## Local Container Build and Scan Example
 
 For demo purposes - and for the love of all that is holy, don't run/deploy this container you are about to build - we can build the vulnerable app into a container and scan it to showcase a typical CI workflow:
@@ -114,10 +118,6 @@ ${CICD_COMMAND} image local/dvwa:20240918 --local --report > outputs/dvwa.image.
 ```
 
 Example output of this command is here: [outputs/dvwa.image.txt](./outputs/dvwa.image.txt)
-
-The detailed view in the Panoptica UI of the results are shown below:
-
-![CI/CD CLI Secret Scanning UI Results](./images/CY24Q3-demo-cicd-secret-details.png)
 
 ## YAML Configuration for Scan Jobs
 
