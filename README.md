@@ -115,6 +115,10 @@ ${CICD_COMMAND} image local/dvwa:20240918 --local --report > outputs/dvwa.image.
 
 Example output of this command is here: [outputs/dvwa.image.txt](./outputs/dvwa.image.txt)
 
+The detailed view in the Panoptica UI of the results are shown below:
+
+![CI/CD CLI Secret Scanning UI Results](./images/CY24Q3-demo-cicd-secret-details.png)
+
 ## YAML Configuration for Scan Jobs
 
 For comprehensive scanning governance, many policies tend to be applied to prevent the maximum amount of risk that is acceptible. As you have seen, itemizing all those policy definitions can become overwhelming. To support these more sophisticated security needs, the Panoptica CI/CD scanner supports the use of a YAML file to configure the CLI operations. You can refer to the [CI/CD CLI Tool](https://docs.panoptica.app/docs/cicd-cli-tool) documentation for all the details.
