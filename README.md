@@ -88,6 +88,10 @@ ${CICD_COMMAND} iac vuln-web-app --report --policies "Demo - Block IaC Critical 
 
 Example output of this command is here: [outputs/dvwa.iac.policy.txt](./outputs/dvwa.iac.policy.txt)
 
+The detailed view in the Panoptica UI of the results are shown below:
+
+![CI/CD CLI Secret IaC UI Results](./images/CY24Q3-demo-cicd-iac-details.png)
+
 ## Secret Scanning Demos
 
 Secret detection walks through the provided filesystem and searches for a wide variety of secrets (PEM files, embedded tokens, etc.) that may have been inadvertently left in the filesystem or hardcoded into the files. Like IaC, the local filesystem is scanned and we'll continue to use the DWVA [vuln-web-app](./vuln-web-app/) git submodule:
